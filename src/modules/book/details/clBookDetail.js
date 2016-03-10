@@ -10,7 +10,7 @@ function BookDetail() {
         restrict: 'E',
         template: bookDetailsTemplate,
         controller: BookDetailsController,
-        controllerAs: 'model'
+        controllerAs: 'book'
     }
 }
 export default moduleName;

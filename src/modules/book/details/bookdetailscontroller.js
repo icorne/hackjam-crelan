@@ -1,3 +1,4 @@
+import angular from 'angular';
 import BookFactory from './../services/bookservice';
 
 BookDetailsController.$inject = ['$routeParams', 'BookFactory'];
@@ -8,7 +9,7 @@ function BookDetailsController($routeParams, BookFactory) {
 
         BookFactory.getBook($routeParams.id)
             .then(function (book) {
-                this.book = book;
+                angular.extend(this,book);
             }.bind(this));
 
     }
