@@ -1,5 +1,5 @@
-(function() {
-  'use strict';
+import angular from 'angular';
+import books from './list/clBook';
+import bookDetails from './details/clBookDetail'
 
-  angular.module('book', []);
-})();
+export default angular.module('book', [books, bookDetails]).name;

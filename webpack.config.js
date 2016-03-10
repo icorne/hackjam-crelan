@@ -27,5 +27,13 @@ module.exports = {
         loader: 'html'
       }
     ]
-  }
+  },
+  plugins: [
+    function() {
+      this.plugin('watch-run', function(watching, callback) {
+        console.log('Begin compile at ' + new Date());
+        callback();
+      })
+    }
+  ]
 };

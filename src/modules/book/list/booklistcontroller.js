@@ -1,16 +1,13 @@
-(function() {
-  'use strict';
+import {factoryName} from './../services/bookservice';
+BookListController.$inject = [factoryName];
 
-    BookListController.$inject = ['BookFactory'];
+function BookListController(BookFactory) {
 
-    function BookListController(BookFactory) {
-
-      BookFactory.getBooks()
-        .then(function(books){
-          this.books = books;
+    BookFactory.getBooks()
+        .then(function (books) {
+            this.books = books;
         }.bind(this));
 
-    }
+}
 
-    angular.module('book').controller('BookListController', BookListController);
-})();
+export default BookListController;

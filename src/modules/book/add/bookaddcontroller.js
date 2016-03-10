@@ -1,17 +1,14 @@
-(function() {
-  'use strict';
+import {factoryName} from './../services/bookservice';
 
-  BookAddController.$inject = ['$scope','$routeParams','BookFactory'];
+BookAddController.$inject = [factoryName];
 
-  function BookAddController($routeParams, BookFactory) {
+function BookAddController(BookFactory) {
 
     function addBook() {
-      BookFactory.addBook(this.book);
+        BookFactory.addBook(this.book);
     }
 
     this.addBook = addBook;
-  }
+}
 
-  angular.module('book').controller('BookAddController',BookAddController);
 
-})();

@@ -1,6 +1,5 @@
-(function() {
-    'use strict';
+import angular from 'angular';
+import shell from './bookstore/bookstoreDirective'
 
-    angular.module('common', []);
-})();
+export default angular.module('common', [shell]).name;
 
