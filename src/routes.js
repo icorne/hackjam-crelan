@@ -5,10 +5,10 @@ RouteConfig.$inject = ['$routeProvider'];
 function RouteConfig($routeProvider) {
     $routeProvider
         .when('/', {
-            template: '<cl-book></cl-book>'
+            template: '<cl-books></cl-books>'
         })
         .when('/books', {
-            template: '<cl-book></cl-book>'
+            template: '<cl-books></cl-books>'
         })
         .when('/books/add', {
             template: '<cl-add-book></cl-add-book>'

@@ -1,6 +1,9 @@
 describe('Controller', function () {
 
-    angular.module('bookstore')
+    angular.module('bookstore', [])
+    .controller('BookListController', function() {
+
+    });
 
     var $controller, ctrl;
 //    bookFactory = function () {

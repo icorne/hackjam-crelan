@@ -1,10 +1,11 @@
 import angular from 'angular';
-import booksTemplate from './book.html';
+import booksTemplate from './books.html';
 import BookController from './booklistcontroller';
 import BookService from './../services/bookservice';
+import clBook from './clBook';
 
-let module = angular.module('book.list', [BookService])
-    .directive('clBook', BookListDirective);
+let module = angular.module('book.list', [BookService, clBook])
+    .directive('clBooks', BookListDirective);
 
 function BookListDirective() {
     return {
