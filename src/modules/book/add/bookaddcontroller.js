@@ -9,6 +9,11 @@ function BookAddController(BookFactory) {
     }
 
     this.addBook = addBook;
+    BookFactory.getBooks()
+        .then(function (books) {
+            this.books = books;
+        }.bind(this));
 }
 
 
+export default BookAddController;

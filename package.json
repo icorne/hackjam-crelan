@@ -8,7 +8,11 @@
     "server": "nodemon server/",
     "deploy": "surge",
     "build": "node_modules/webpack/bin/webpack.js -w",
-    "test": "karma start"
+    "test": "karma start",
+    "webdriver:update": "webdriver-manager update",
+    "webdriver:start": "webdriver-manager start",
+    "pree2e": "npm run webdriver:update -- --standalone",
+    "e2e": "protractor protractor.conf.js"
   },
   "keywords": [
     "angular",
